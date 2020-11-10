@@ -95,7 +95,7 @@ class PolygonSeqType:
             return f'Max Efficiency Polygon is {self._max_efficiency.__repr__()}'
         except IndexError:
             self._max_efficiency = 0
-            return f'Yet to calculate -- access some objects of Polygon'
+            return f'Yet to calculate Max Efficiency [{self._max_efficiency.__repr__()}]-- access some objects of Polygon'
 
     def __repr__(self):
         return f'PolygonSeqType(Vertices (of largest Polygon) = {self._max_vertices}, Common Circum_Radius, R = {self._common_radius})'

@@ -54,6 +54,8 @@ class Polygon:
         if self._vertices is None:
             print('Setting vertices')
             self._vertices = self._edges
+        else:
+            print('Re-using previously computed vertices')
         return int(f'{self._vertices}')
 
     @property
@@ -65,6 +67,8 @@ class Polygon:
         if self._angle is None:
             print('Calculating interior angle')
             self._angle = ((self._edges - 2) * 180/self._edges)
+        else:
+            print('Re-using previously computed interior angle')
         return float(f'{self._angle:.4f}')
 
     @property
@@ -76,6 +80,8 @@ class Polygon:
         if self._edge_len is None:
             print('Calculating edge_len')
             self._edge_len = (2 * self._circum_radius * math.sin(math.pi/self._edges))
+        else:
+            print('Re-using previously computed edge length')
         return float(f'{self._edge_len:.4f}')
 
     @property
@@ -87,6 +93,8 @@ class Polygon:
         if self._apothem is None:
             print('Calculating apothem')
             self._apothem = (2 * self._circum_radius * math.cos(math.pi/self._edges))
+        else:
+            print('Re-using previously computed apothem')
         return float(f'{self._apothem:.4f}')
 
     @property
@@ -98,6 +106,8 @@ class Polygon:
         if self._area is None:
             print('Calculating area')
             self._area = (self._edges * self.edge_length * self.apothem)/2
+        else:
+            print('Re-using previously computed area')
         return float(f'{self._area:.4f}')
 
     @property
@@ -109,6 +119,8 @@ class Polygon:
         if self._perimeter is None:
             print('Calculating perimeter')
             self._perimeter = (self._edges * self.edge_length)
+        else:
+            print('Re-using previously computed perimeter')
         return float(f'{self._perimeter:.4f}')
 
     @property
@@ -121,6 +133,8 @@ class Polygon:
         if self._strictconvex is None:
             print('Setting strictconvex polygon or not')
             self._strictconvex = (self._angle < 180)
+        else:
+            print('Re-using previously computed convex property')
         return self._strictconvex
 
     def __repr__(self):
