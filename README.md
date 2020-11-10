@@ -5,7 +5,7 @@ The test cases in this assignment are focused upon various properties of Polygon
 Iterables:
 Iterable is an object that
 ```bash
-a) Implements __iter__ method <\n>
+a) Implements __iter__ method
 b) Method returns an iterator that can be used to iterate over the object
 ```
 
@@ -43,14 +43,14 @@ Some of the benefits of property decorator and setters are
 Modules overview
 ```
 #polygon.py
-Contains Polygon classe which takes edges and circum radius as initializer arguments and computes various properties like interior angle, apothem etc.
-Detailed list of properties are mentioned below
-The test cases focused on whether lazy computation of attributes supported, the class is immutable or not
+Contains Polygon classe which takes edges and circum radius as initializer arguments and computes various properties like interior angle, apothem etc.\
+Detailed list of properties are mentioned below\
+The test cases focused on whether lazy computation of attributes supported, the class is immutable or not\
 Along with computation of the properties, the Polygon class also supports the functionality to compare two Polygons for both equality and greater
 
 #polygon_sequence_type.py
-Contains Polygon_SeqType class which takes max edges and common circum radius as the initializer arguments and computes the maximum efficienct polygon
-Also being Iterable, it also supports next(), iter() features.
+Contains Polygon_SeqType class which takes max edges and common circum radius as the initializer arguments and computes the maximum efficienct polygon\
+Also being Iterable, it also supports next(), iter() features.\
 The polygon objects, max_efficiency property are computed lazily and not pre-computed
 
 #test_session14.py
@@ -59,11 +59,11 @@ Contains test cases for both Polygon and PolygonSeqType classes
 ```bash
 Assignment objects are given below
 ```
-Goal 1:
-Refactor the Polygon class so that all the calculated properties are lazy properties,
-i.e. they should still be calculated properties, but they should not have to get
+Goal 1:\
+Refactor the Polygon class so that all the calculated properties are lazy properties,\
+i.e. they should still be calculated properties, but they should not have to get\
 recalculated more than once (since we made our Polygon class "immutable").
 
-Goal 2:
-Refactor the Polygons (sequence) type, into an iterable. Make sure also that the elements in the iterator are computed lazily
+Goal 2:\
+Refactor the Polygons (sequence) type, into an iterable. Make sure also that the elements in the iterator are computed lazily\
 i.e. you can no longer use a list as an underlying storage mechanism for your polygons. You'll need to implement both an iterable, and an iterator.
